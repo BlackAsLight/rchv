@@ -1,0 +1,20 @@
+{
+  "tasks": {
+    "build": "deno run -A bundle.ts"
+  },
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": [
+      "deno.ns",
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable"
+    ]
+  },
+  "imports": {
+    "@luca/esbuild-deno-loader": "jsr:@luca/esbuild-deno-loader@^0.10.3",
+    "@types/streamsaver": "npm:@types/streamsaver@^2.0.4",
+    "esbuild": "npm:esbuild@^0.20.2",
+    "streamsaver": "npm:streamsaver@^2.0.6"
+  }
+}

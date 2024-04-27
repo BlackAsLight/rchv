@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Archiver</title>
+	<link href="/css/main.css" rel="stylesheet">
+	<script type="module" src="https://kit.fontawesome.com/435c530d1e.js" crossorigin="anonymous"></script>
+	<script type="module" src="/js/main.min.js"></script>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Create Tarball</legend>
+		<input id="file" type="file" multiple>
+		<label for="file">Click or Drag & Drop<i class="fa-solid fa-file-import"></i></label>
+		<ul id="files"></ul>
+		<button type="submit" data-progress="15%" disabled><span>Generate</span> <i class="fa-solid fa-file-zipper"></i></button>
+		<progress max="100" value="0"></progress>
+		</fieldset>
+	</form>
+</body>
+</html>
