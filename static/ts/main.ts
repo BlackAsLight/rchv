@@ -7,9 +7,10 @@ const files: File[] = []
 const ulTag = document.querySelector<HTMLUListElement>('ul')!
 const progressTag = document.querySelector<HTMLProgressElement>('progress')!
 
-function addFiles(fileList: Iterable<File>) {
+async function addFiles(fileList: Iterable<File>) {
 	for (const file of fileList)
 		if (files.findIndex(f => f.name === file.name) === -1) {
+			await new Promise(a => setTimeout(a, 0))
 			files.push(file)
 			ulTag.append(
 				createTag('li', liTag => liTag.append(
