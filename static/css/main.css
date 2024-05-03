@@ -14,15 +14,13 @@
 body {
 	background: var(--background);
 	color: var(--color);
-	max-width: 64rem;
-	margin: auto;
 	display: grid;
 	min-height: 100vh;
 	place-content: center;
 }
 
 form {
-	width: 32rem;
+	min-width: 32rem;
 }
 
 fieldset {
