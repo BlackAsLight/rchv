@@ -29,6 +29,7 @@ async function addFiles(fileList: Iterable<File>) {
 				))
 			)
 		}
+	document.querySelector<HTMLInputElement>('input[type="file"]')!.value = ''
 	if (files.length)
 		document.querySelector<HTMLButtonElement>('button[type="submit"]')!.disabled = false
 }
