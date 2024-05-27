@@ -10,7 +10,7 @@ await Promise.allSettled([
 ])
 
 const promises: Promise<void>[] = []
-for await (const dirEntry of Deno.readDir('./static/ts/'))
+for await (const dirEntry of Deno.readDir('./static/ts/')) {
 	if (dirEntry.isFile && dirEntry.name.endsWith('.ts')) {
 		console.log('   ./static/ts/' + dirEntry.name)
 		console.log('=> ./static/js/' + dirEntry.name.slice(0, -2) + 'js')
@@ -20,6 +20,7 @@ for await (const dirEntry of Deno.readDir('./static/ts/'))
 			esbuild('./static/ts/' + dirEntry.name, './static/js/' + dirEntry.name.slice(0, -2) + 'min.js', true),
 		)
 	}
+}
 await Promise.allSettled(promises)
 stop()
 // await Promise.allSettled([
@@ -38,6 +39,6 @@ async function esbuild(inPath: string, outPath: string, minify: boolean) {
 		bundle: true,
 		minify,
 	})
-	errors.forEach(x => console.error(x))
-	warnings.forEach(x => console.warn(x))
+	errors.forEach((x) => console.error(x))
+	warnings.forEach((x) => console.warn(x))
 }
