@@ -1,6 +1,6 @@
 // @deno-types='@types/streamsaver'
 import streamSaver from 'streamsaver'
-import { TarStream, TarStreamFile } from './lib/tar.ts'
+import { type TarFile, TarStream } from '@doctor/tar-stream'
 import { createTag } from '@doctor/create-tag'
 
 const files: File[] = []
@@ -75,7 +75,7 @@ document.querySelector<HTMLFormElement>('form')!
 		const totalSize = files.reduce((sum, file) => sum + file.size + 1024 - (file.size % 512 || 512), 1024)
 		progressTag.setAttribute('max', totalSize.toString())
 		if (
-			!await new ReadableStream<TarStreamFile>({
+			!await new ReadableStream<TarFile>({
 				pull(controller) {
 					if (!files.length) {
 						return controller.close()

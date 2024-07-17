@@ -13,6 +13,7 @@
 	},
 	"imports": {
 		"@doctor/create-tag": "jsr:@doctor/create-tag@^0.1.3",
+		"@doctor/tar-stream": "jsr:@doctor/tar-stream@^1.0.0",
 		"@luca/esbuild-deno-loader": "jsr:@luca/esbuild-deno-loader@^0.10.3",
 		"@types/streamsaver": "npm:@types/streamsaver@^2.0.4",
 		"esbuild": "npm:esbuild@^0.20.2",

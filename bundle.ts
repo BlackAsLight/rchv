@@ -23,10 +23,6 @@ for await (const dirEntry of Deno.readDir('./static/ts/')) {
 }
 await Promise.allSettled(promises)
 stop()
-// await Promise.allSettled([
-// 	Deno.rename('./static/js/serviceWorker.js', './static/serviceWorker.js'),
-// 	Deno.rename('./static/js/serviceWorker.js', './static/serviceWorker.min.js')
-// ])
 
 console.log(performance.now().toLocaleString('en-US', { maximumFractionDigits: 2 }) + 'ms')
 
