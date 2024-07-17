@@ -32,7 +32,7 @@ console.log(performance.now().toLocaleString('en-US', { maximumFractionDigits: 2
 
 async function esbuild(inPath: string, outPath: string, minify: boolean) {
 	const { errors, warnings } = await build({
-		plugins: denoPlugins({ configPath: await Deno.realPath('./deno.json') }),
+		plugins: denoPlugins({ configPath: await Deno.realPath('./deno.jsonc') }),
 		entryPoints: [inPath],
 		outfile: outPath,
 		format: 'esm',
