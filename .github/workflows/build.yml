@@ -9,7 +9,7 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: "paages"
+  group: 'pages'
   cancel-in-progress: false
 jobs:
   deploy:

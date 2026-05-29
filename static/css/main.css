@@ -1,10 +1,10 @@
 :root {
 	--background: #333333;
 	--background-off: #474747;
-	--color: #BFDBF7;
-	--bad: #D90858;
-	--gold: #F2AF29;
-	--good: #89CE94;
+	--color: #bfdbf7;
+	--bad: #d90858;
+	--gold: #f2af29;
+	--good: #89ce94;
 }
 
 * {
@@ -40,11 +40,11 @@ legend {
 	padding: 0.25rem 0.75rem;
 }
 
-input:disabled + label[for="file"] {
+input:disabled + label[for='file'] {
 	color: var(--bad);
 }
 
-label[for="file"] {
+label[for='file'] {
 	display: flex;
 	place-content: center;
 	color: var(--good);
@@ -54,11 +54,11 @@ label[for="file"] {
 	width: 100%;
 }
 
-input[type="file"] {
+input[type='file'] {
 	display: none;
 }
 
-button[type="submit"] {
+button[type='submit'] {
 	position: relative;
 	width: 10rem;
 	/* padding: 0; */
@@ -79,7 +79,7 @@ button:disabled {
 	background: var(--bad);
 }
 
-progress[value="0"] {
+progress[value='0'] {
 	display: none;
 }
 
@@ -118,9 +118,9 @@ li {
 	grid-template-columns: auto min-content;
 	gap: 1rem;
 	padding: 0.5rem;
-	align-items:center;
+	align-items: center;
 }
 
-li:nth-child(2n - 1) {
+li:nth-child(2n-1) {
 	background-color: var(--background-off);
 }
